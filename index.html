@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Bot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Sagar's Cafe Coffee Shop!</h1>
+    <form id="coffeeForm">
+      <!-- Size Options -->
+      <label for="size">What size drink can I get for you?</label>
+      <select id="size" required>
+        <option value="" disabled selected>Select size</option>
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+
+      <!-- Drink Type -->
+      <label for="drinkType">What type of drink would you like?</label>
+      <select id="drinkType" required>
+        <option value="" disabled selected>Select drink type</option>
+        <option value="brewed coffee">Brewed Coffee</option>
+        <option value="mocha">Mocha</option>
+        <option value="latte">Latte</option>
+      </select>
+
+      <!-- Latte Milk Options -->
+      <div id="milkOptionsContainer" style="display: none;">
+        <label for="milkOptions">And what kind of milk for your latte?</label>
+        <select id="milkOptions">
+          <option value="" disabled selected>Select milk type</option>
+          <option value="2% milk">2% Milk</option>
+          <option value="non-fat milk">Non-fat Milk</option>
+          <option value="soy milk">Soy Milk</option>
+        </select>
+      </div>
+
+      <!-- Cup Options -->
+      <label for="cupType">Would you like a plastic cup or did you bring your own reusable cup?</label>
+      <select id="cupType" required>
+        <option value="" disabled selected>Do you have a cup with you?</option>
+        <option value="plastic">I'll need a cup.</option>
+        <option value="reusable">Brought my own!</option>
+      </select>
+
+      <!-- Temperature -->
+      <label for="temperature">Would your drink be hot or iced?</label>
+      <select id="temperature" required>
+        <option value="" disabled selected>Do you want your coffee piping hot(like you) or cool(like you) with some ice?</option>
+        <option value="hot">Hot</option>
+        <option value="iced">Iced</option>
+      </select>
+
+      <!-- User Name -->
+      <label for="name">Can I get your name please?</label>
+      <input type="text" id="name" placeholder="Your Name" required>
+
+      <!-- Submit Button -->
+      <button type="button" id="submitOrder">Submit Order</button>
+    </form>
+
+    <!-- Order Summary -->
+    <div id="output"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
